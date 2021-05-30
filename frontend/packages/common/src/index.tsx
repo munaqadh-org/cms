@@ -1,15 +1,12 @@
-import React, { useState } from "react";
+import * as React from 'react';
 import { Button, StyleSheet, Text, View } from "react-native";
 
 export const App = () => {
-  const [count, setCount] = useState(0);
 
   return (
-    <View style={styles.container}>
+    <View>
       <Text style={styles.welcome}>Welcome to React Native!</Text>
       <Text style={styles.instructions}>To get started, edit App.tsx</Text>
-      <Text style={styles.instructions}>{count}</Text>
-      <Button title="increment" onPress={() => setCount(count + 1)} />
     </View>
   );
 };

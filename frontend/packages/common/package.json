@@ -2,9 +2,11 @@
     "name": "@wow/common",
     "version": "1.0.0",
     "description": "",
-    "main": "index.js",
+    "main": "dist/index.js",
     "scripts": {
-      "build": "rimraf dist && tsc"
+        "postinstall": "npm run build",
+        "build": "rimraf dist && tsc",
+        "watch": "tsc --watch"
     },
     "keywords": [],
     "author": "",
@@ -12,5 +14,12 @@
     "dependencies": {
         "react": "17.0.1",
         "react-native": "0.64.1"
-    }
+    },
+    "devDependencies": {
+        "@types/react-native": "0.57.36",
+        "@types/react-router-dom": "4.3.1",
+        "@types/react-router-native": "4.2.4",
+        "rimraf": "^2.6.3",
+        "typescript": "^3.4.2"
+      }
   }
